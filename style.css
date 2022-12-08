@@ -56,3 +56,8 @@ body {
   font-size: 1.8rem;
   padding: 1rem 0;
 }
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.4rem #e2e8f0;
+}
