@@ -3,7 +3,7 @@ const submitButton = document.querySelector(".submit-btn");
 const output = document.querySelector(".output");
 
 function letterCounter(str) {
-  const lettersCount = str.replace(/\s+/g, "").length;
+  const lettersCount = str.split("").filter((c) => c != " ").length;
   return lettersCount;
 }
 
@@ -13,8 +13,8 @@ function wordCounter(str) {
 }
 
 function checkCount() {
-  const letterCount = letterCounter();
-  console.log(letterCount);
+  const inputText = inputBox.value;
+  const letterCount = letterCounter(inputText);
   output.innerText = `letters: ${letterCount}`;
 }
 
